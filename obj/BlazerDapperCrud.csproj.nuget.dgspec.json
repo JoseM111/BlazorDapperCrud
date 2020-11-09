@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/josemartinez/Documents/Dotnet/BlazerDapperCrud/BlazerDapperCrud/BlazerDapperCrud.csproj": {}
+  },
+  "projects": {
+    "/Users/josemartinez/Documents/Dotnet/BlazerDapperCrud/BlazerDapperCrud/BlazerDapperCrud.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/josemartinez/Documents/Dotnet/BlazerDapperCrud/BlazerDapperCrud/BlazerDapperCrud.csproj",
+        "projectName": "BlazerDapperCrud",
+        "projectPath": "/Users/josemartinez/Documents/Dotnet/BlazerDapperCrud/BlazerDapperCrud/BlazerDapperCrud.csproj",
+        "packagesPath": "/Users/josemartinez/.nuget/packages/",
+        "outputPath": "/Users/josemartinez/Documents/Dotnet/BlazerDapperCrud/BlazerDapperCrud/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/josemartinez/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.35, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.22, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

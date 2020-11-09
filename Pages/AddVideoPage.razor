@@ -1,0 +1,54 @@
+@using BlazerDapperCrud.Data
+@page "/addvideo"
+@inject IVideoService VideoService
+@inject NavigationManager NavigationManager
+
+<h1>Add A Video</h1>
+@* ∆•••••••••••••• *@
+<EditForm Model="@video" OnInvalidSubmit="@InsertVideo">
+    <table>
+        @* ∆•••••••••••••• *@
+        <tr>
+            <td>Video Title:</td>
+            <td><input type="text" @bind="video.Title" required></td>
+        </tr>
+        @* ∆•••••••••••••• *@
+        <tr>
+            <td>Date Published:</td>
+            <td><input type="date" @bind="video.DatePublished" required></td>
+        </tr>
+        @* ∆•••••••••••••• *@
+        <tr>
+            <td>Is Active:</td>
+            <td><input type="checkbox" @bind="video.IsActive" ></td>
+        </tr>
+        @* ∆•••••••••••••• *@
+        @* ............ BUTTON ............*@
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <input type="submit" value="Add">
+                <input type="button" value="Cancel" @onclick="@Cancel">
+            </td>
+        </tr>
+        
+    </table>
+</EditForm>
+
+@* ∆__________________________________________________________ *@
+
+@code {
+    ///∆: - ©Global-PROPERTIES
+    //∆..............................
+    readonly VideoModel video = new VideoModel();
+    //∆..............................
+
+
+    protected async Task InsertVideo() {
+        await VideoService.InsertVideo(video);
+        NavigationManager.NavigateTo("/");
+    }
+
+    // ∆ If they cancel they will navigate to the Home page
+    void Cancel() => NavigationManager.NavigateTo("/");
+
+}
